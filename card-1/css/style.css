@@ -1,0 +1,40 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(172, 176, 177);
+}
+.service-area{
+  padding: 100px 0;
+  background-color: rgb(7, 7, 50);
+
+
+}
+.service-title{
+  text-align: center;
+}
+
+.service-title h4{
+  color:black;
+  /* display: inline-block; */
+  font-size:5rem ;
+  -webkit-text-stroke-width:2px ;
+  -webkit-text-stroke-color: transparent;
+  letter-spacing: 4px;
+  background-color: rgb(22, 22, 103);
+  background: linear-gradient(8deg, rgba(8,52,83,1)0%,rgba(0,230,173,1)41%,rgba(41,17,45,1)100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent ;
+  
+}
+/* .services{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  
+} */
