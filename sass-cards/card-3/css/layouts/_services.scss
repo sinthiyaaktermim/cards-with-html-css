@@ -1,0 +1,138 @@
+body{
+  overflow:hidden;
+}
+
+.services {
+  min-height: 100vh;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  padding: 3rem 8%;
+  // position: relative;
+  overflow: hidden;
+  .content {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    margin: 5rem 0;
+    h1 {
+      font-size: 3.5rem;
+      line-height: 3.7rem;
+      letter-spacing: 1px;
+      width: 50%;
+    }
+    p {
+      width: 50%;
+    }
+  }
+  .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    overflow: hidden;
+    background-color: red;
+    position: relative;
+    .cards {
+      height: 220px;
+      width: 370px;
+      border: 2px solid rgb(193, 217, 193);
+      border-radius: 28px;
+      display: flex;
+      flex-direction: column;
+      padding: 3rem 8%;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background-color: transparent;
+      transition: 0.6s;
+      &::after {
+        content: '';
+        background-color: #fff;
+        height: 40%;
+        width: 8%;
+        border-radius: 28px;
+        position: absolute;
+        top: 30%;
+        right: -4%;
+        transition: 0.6s;
+        z-index: -1;
+      }
+      &:hover {
+        color: #000;
+      }
+      &:hover::after {
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        right: 0%;
+      }
+      h2 {
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+      }
+       ul li {
+  margin-right: 12px;
+}
+ul li {
+  margin-left: 8px;
+}
+    }
+  }
+}
+.circle {
+  height: 750px;
+  width: 750px;
+  border: 150px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 48%;
+  left: 80%;
+  border-radius: 50%;
+  background-color: red;
+}
+@media (max-width:1200px){
+  // body{
+  //   overflow:visible;
+  // }
+  .content{
+    flex-direction: column;
+    align-items: center;
+    h1{
+      width: 100%;
+    }
+    p{
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .services{
+    // overflow-x: hidden;
+  .card{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+.circle{
+  display: none;
+}
+}
+@media (max-width:992px){
+  .services{   
+  .card{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+}
+@media (max-width:768px){
+  .services{
+  .card{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+}
+
