@@ -1,0 +1,134 @@
+#service-section{
+  min-height: 750px;
+  width: 100%;
+  background-color: #b8b9c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h2{
+    font-size:2rem ;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    position: relative;
+     &::after{
+    content: "";
+    top:8px ;
+    right: -30px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    border-top:20px solid transparent ;
+    border-right: 20px solid var(--primary-color) ;
+  }
+   &::before{
+    content: "";
+    top:8px ;
+    left: -30px;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    border-top:20px solid transparent ;
+    border-left: 20px solid var(--primary-color) ;
+  }
+  
+  }
+  #paragraph{
+    width: 45%;
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255,255,255,.7);
+    line-height: 1.5rem;
+    white-space: 1px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+ .card{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  z-index: 9;
+  margin-top: 20px;
+  .cards{
+    min-height: 300px;
+    width: 380px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0 8%;
+    background-color: rgb(217, 189, 243);
+    border-radius: 10px;
+    position: relative;
+    &::before{
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 10px;
+      background-color: #fd562a;
+      transform: rotate(0deg);
+      z-index: -1;
+    }
+    &:hover::before{
+      transform: rotate(10deg);
+    }
+    i{
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+    h3{
+      text-transform: capitalize;
+      font-size: 1.8rem;
+      color: #000;
+      margin-bottom: 10px;
+    }
+    .content p{
+      color: rgb(255,255,255,0.5);
+      font-size: 1.05rem;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+  }
+ }
+}
+@media (max-width:1200px){
+  #service-section{
+    h2{
+    margin-top: 30px;
+    }
+    .card{
+      grid-template-columns: repeat(2,1fr);
+    }
+    #paragraph{
+      width: 80%;
+    }
+  }
+}
+@media (max-width:992px){
+  #service-section{
+
+  .card{
+    grid-template-columns: repeat(2,1fr);
+    .cards{
+    width: 370px;
+      background-color: rgb(147, 208, 57);
+      i{
+        color:rgb(120, 167, 184);
+      }
+    }
+  }
+  }
+
+}
+@media (max-width:768px){
+  #service-section{
+    .card{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+}
